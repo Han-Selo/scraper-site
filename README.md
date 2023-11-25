@@ -1,6 +1,6 @@
 # scraper-site
 
-This is a Flask project that scrapes the site of BR24 for news based on the given keywods by the user.
+This is a Flask project that scrapes the site of BR24 for news based on the given keywords by the user and aggregates them.
 
 ## Local Setup
 
