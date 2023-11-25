@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 anyio==3.7.1
 appdirs==1.4.4
->>>>>>> 1d26098fbe1dd92607dd2358136557ed1c39ed37
 attrs==23.1.0
 beautifulsoup4==4.12.2
 blinker==1.7.0
