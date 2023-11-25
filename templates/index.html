@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nachrichtenlage</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Nachrichtenlage</h1>
+        <form method="post" action="{{ url_for('index') }}">
+            <label for="keywords">Suchbegriffe eingeben: </label>
+            <input type="text" id="keywords" name="keywords" required>
+            <button type="submit">Zusammenfassen</button>
+        </form>
+        {% if keywords %}
+            <h3>Suchbegriffe: {{ keywords }}</h3>
+            <!-- Add a link to view results on a separate page -->
+            <p><a href="{{ url_for('result', keywords=keywords, articles_summary=articles_summary) }}">See Results</a></p>
+        {% endif %}
+        <h3>Artikel Zusammengefasst: </h3>
+        {% if articles_summary %}
+            <p>{{ article }}</p>
+        {% else %}
+            <p>Es werden derzeit keine Artikeln angezeigt, bitte geben Sie einen Suchbegriff ein.</p>
+        {% endif %}
+        
+    </main>
+</html>
